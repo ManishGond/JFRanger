@@ -2,9 +2,11 @@ import React from 'react';
 
 const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
-    <button className="theme-toggle" onClick={toggleTheme}>
-      {theme === 'dark' ? '🌞 Day Mode' : '🌙 Night Mode'}
+    <div className="theme-toggle">
+    <button  onClick={toggleTheme}>
+      {theme === 'dark' ? '🔆' : '🌙'}
     </button>
+    </div>
   );
 };
 
