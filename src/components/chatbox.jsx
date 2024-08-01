@@ -15,7 +15,7 @@ const ChatBox = () => {
 
   return (
     <div className="chat-box">
-      <input 
+        <input
         type="text" 
         value={message} 
         onChange={handleInputChange} 

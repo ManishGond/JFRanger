@@ -6,14 +6,15 @@ import ThemeToggle from './components/themetoggle';
 import Footer from './components/footer';
 
 const App = () =>{
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
+ 
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   const toggleTheme = () =>{
-    setTheme((prevTheme) => (prevTheme ==='dark'?'light':'dark'));
+    setTheme((prevTheme) => (prevTheme ==='light'?'dark':'light'));
   };
 
   return(
