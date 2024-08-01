@@ -1,3 +1,24 @@
+:root {
+  --font-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+}
+
+[data-theme='light'] {
+  --font-color: #213547;
+  --background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
 .app {
   text-align: center;
   display: flex;
@@ -11,6 +32,8 @@
 
 .header {
   padding: 20px;
+  position: relative;
+  width: 100%;
 }
 
 .logo img {
@@ -18,10 +41,38 @@
   height: auto;
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.theme-toggle:hover {
+  border-color: #646cff;
+}
+
+.theme-toggle:focus,
+.theme-toggle:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 .chat-box {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .chat-box input {
@@ -37,42 +88,6 @@
 
 .footer {
   padding: 10px;
-}
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--background-color);
-  color: var(--color);
 }
 
 h1 {
@@ -91,19 +106,17 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
   a:hover {
     color: #747bff;
   }
@@ -111,4 +124,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
