@@ -6,6 +6,7 @@
 [data-theme="light"] {
   --font-color: black;
   --background-color: #ffffff;
+  
 }
 
 body {
@@ -31,9 +32,27 @@ body {
 }
 
 .header {
-  padding: 20px;
+  padding: 10px 20px;
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+.header-main {
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  right: 590px;
+  top: -40px;
+  
 }
 
 .logo img {
@@ -41,10 +60,10 @@ body {
   height: auto;
 }
 
-.header button {
+.header-main button {
   position: absolute;
-  top: -40px;
-  right: -300px;
+  top: 10px;
+  right: -900px;
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 1.1em;
@@ -54,9 +73,10 @@ body {
   color: var(--font-color);
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+
 }
 
-.header button:hover {
+.header-main button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
@@ -99,8 +119,8 @@ body {
 .chat-box button {
   border-radius: 50%;
   border: 1px solid transparent;
+  background-color: black;
   padding: 10px;
-  background-color: #1a1a1a;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -162,4 +182,26 @@ button:hover {
   font-variation-settings: "width" 100;
 }
 
+html, body {
+  overflow: hidden;
+}
 
+.header-logo img{
+  height: 40px; 
+  display: flex;  
+}
+
+.header-logo h1 {
+  display: flex;
+  font-weight: 500;
+  flex-direction: column;
+  height: 10px;
+  font-size: 18px;
+}
+
+.header-logo {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  gap: 12px;
+  padding-left: 100px;
+}

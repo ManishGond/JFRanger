@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ChatBox = () => {
+const ChatBox = ({theme,toggleTheme}) => {
   const [message, setMessage] = useState("");
 
   const handleInputChange = (e) => {

@@ -1,13 +1,17 @@
 import React from 'react';
+import JFLogo from "../assets/logo-justfood.png";
+
 
 const Header = ({ theme, toggleTheme }) => {
   return (
-    <header className="header">
-      <div className="header-toggle">
-      <button onClick={toggleTheme}>
+    <header className="header-main">
+      <div className="header-logo">
+        <img src={JFLogo} alt="JustFood Logo" />
+        <h1>JF Ranger</h1>
+      </div>
+      <button className="theme-toggle-button" onClick={toggleTheme}>
         {theme === 'dark' ? '🔆' : '🌙'}
       </button>
-    </div>
     </header>
   );
 };
