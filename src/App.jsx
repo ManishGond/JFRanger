@@ -18,7 +18,6 @@ const App = () => {
   return (
     <div className="app">
       <Header theme={theme} toggleTheme={toggleTheme}/>
-      {/* <ThemeToggle  /> */}
       <JustBody />
     </div>
   );

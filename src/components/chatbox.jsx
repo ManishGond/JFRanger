@@ -8,8 +8,16 @@ const ChatBox = () => {
   };
 
   const handleSendMessage = () => {
+    // Handle sending message logic here
     console.log("Message sent: ", message);
     setMessage("");
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent default form submission behavior
+      handleSendMessage();
+    }
   };
 
   return (
@@ -18,6 +26,7 @@ const ChatBox = () => {
         type="text"
         value={message}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown} // Listen for keydown events
         placeholder="Type a new question..."
       />
       <button onClick={handleSendMessage}>
