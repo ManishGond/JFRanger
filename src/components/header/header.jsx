@@ -1,6 +1,6 @@
 import React from 'react';
-import JFLogo from "../assets/logo-justfood.png";
-
+import JFLogo from "../../assets/logo-justfood.png";
+import "../header/header.css"
 
 const Header = ({ theme, toggleTheme }) => {
   return (

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./App.css";
-import ChatBox from './components/chatbox';
-import Footer from './components/footer';
-import Body from './components/body';
+import ChatBox from './components/chatbot/chatbox';
+import Footer from './components/footer/footer';
+import Body from './components/body/HeroSection';
 
 
 const JustBody = () => {
