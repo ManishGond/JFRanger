@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
   return (
     <header className="header">
-      {/* Add header content if needed */}
+      <div className="header-toggle">
+      <button onClick={toggleTheme}>
+        {theme === 'dark' ? '🔆' : '🌙'}
+      </button>
+    </div>
     </header>
   );
 };

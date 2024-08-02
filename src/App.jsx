@@ -17,8 +17,8 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <Header theme={theme} toggleTheme={toggleTheme}/>
+      {/* <ThemeToggle  /> */}
       <JustBody />
     </div>
   );
