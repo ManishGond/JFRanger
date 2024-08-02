@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./App.css";
 import Header from './components/header';
-import ThemeToggle from './components/themetoggle';
 import JustBody from './JustBody';
 
 const App = () => {

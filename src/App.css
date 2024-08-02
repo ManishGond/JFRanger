@@ -41,10 +41,10 @@ body {
   height: auto;
 }
 
-.theme-toggle button {
+.header button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -40px;
+  right: -300px;
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 1.1em;
@@ -53,7 +53,13 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
 }
+
+.header button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
 
 .chat-box {
   display: flex;
@@ -129,11 +135,6 @@ h1 {
 
 button:hover {
   border-color: white;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
