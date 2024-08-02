@@ -1,12 +1,24 @@
 :root {
   --font-color: rgba(255, 255, 255, 0.87);
   --background-color: #242424;
+  --button-background-light: black;
+  --button-background-dark: white;
+  --button-color-light: white;
+  --button-color-dark: black;
 }
 
 [data-theme="light"] {
   --font-color: black;
   --background-color: #ffffff;
-  
+  --button-background: var(--button-background-light);
+  --button-color: var(--button-color-light);
+  --svg-color: var(--svg-color-light);
+}
+
+[data-theme="dark"] {
+  --button-background: var(--button-background-dark);
+  --button-color: var(--button-color-dark);
+  --svg-color: var(--svg-color-dark);
 }
 
 body {
@@ -119,9 +131,9 @@ body {
 .chat-box button {
   border-radius: 50%;
   border: 1px solid transparent;
-  background-color: black;
+  background-color: var(--button-background);
   padding: 10px;
-  color: white;
+  color: var(--button-color);
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -130,7 +142,7 @@ body {
 }
 
 .chat-box button:hover {
-  background-color: #333;
+  background-color: var(--button-background) /* same as background color to keep consistency */;
 }
 
 .chat-box button:focus,
@@ -141,7 +153,7 @@ body {
 .chat-box button svg {
   width: 24px;
   height: 24px;
-  color: white;
+  color: var(--svg-color);
 }
 
 .footer {
