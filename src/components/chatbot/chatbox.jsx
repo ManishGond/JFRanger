@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../chatbot/Chatbot.css'; // Add this for styling
+import '../chatbot/chatbot.css'; 
 
 const ChatBox = () => {
   const [message, setMessage] = useState("");
@@ -33,7 +33,9 @@ const ChatBox = () => {
   return (
     <div className="chat-box">
       {introVisible && (
+        
         <div className="intro-text">
+          
           <h1>How can I assist you?</h1>
           <p>I'm here to answer your questions</p>
         </div>
