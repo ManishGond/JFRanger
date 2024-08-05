@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../chatbot/chatbot.css'; 
+import './Chatbot.css'; // Ensure correct path
 
 const ChatBox = ({ introVisible, setIntroVisible })  => {
   const [message, setMessage] = useState("");
@@ -32,9 +32,7 @@ const ChatBox = ({ introVisible, setIntroVisible })  => {
   return (
     <div className="chat-box">
       {introVisible && (
-        
         <div className="intro-text">
-          
           <h1>How can I assist you?</h1>
           <p>I'm here to answer your questions</p>
         </div>
