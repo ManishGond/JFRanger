@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import '../chatbot/Chatbot.css'; // Add this for styling
+import './Chatbot.css'; // Ensure correct path
 
-const ChatBox = () => {
+const ChatBox = ({ introVisible, setIntroVisible })  => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const [introVisible, setIntroVisible] = useState(true);
 
   const handleInputChange = (e) => {
     setMessage(e.target.value);
@@ -18,7 +17,7 @@ const ChatBox = () => {
 
       // Simulate bot response
       setTimeout(() => {
-        setMessages([...messages, { text: message, sender: 'user' }, { text: "This is a bot response.", sender: 'bot' }]);
+        setMessages(prevMessages => [...prevMessages, { text: "This is a bot response.", sender: 'bot' }]);
       }, 1000);
     }
   };

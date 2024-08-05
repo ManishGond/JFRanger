@@ -1,9 +1,10 @@
 import React from "react";
+import './HeroSection.css';
 import JFLogo from "../../assets/logo-justfood.png";
 
-const Body = ({ introVisible }) => {
+const HeroSection = ({ introVisible }) => {
   return (
-    <header className={`header ${!introVisible ? 'hidden' : ''}`}>
+    <header className={`header ${introVisible ? '' : 'hidden'}`}>
       <div className="logo">
         <img src={JFLogo} alt="Logo" />
       </div>
@@ -11,4 +12,4 @@ const Body = ({ introVisible }) => {
   );
 };
 
-export default Body;
+export default HeroSection;
